@@ -1,0 +1,165 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* Styles */
+.page {
+    height: 100vh;
+    background-image: url(background2.jpg);
+    background-repeat: no-repeat;
+    background-size: 100vw;
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    grid-template-rows: 100px auto auto 50px;
+    grid-template-areas: 
+    "logo logo logo nav nav nav nav nav nav nav"
+    "body1 body1 body1 body1 body1 body1 body1 body1 body1 body1"
+    "body2 body2 body2 body2 body2 body2 body2 body2 body2 body2"
+    "footer footer footer footer footer footer footer footer footer footer";
+}
+.logo {
+    grid-area: logo;
+    background-color: rgb(181, 157, 181, 0.2);
+}
+
+.logo img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin: 20px 80px;
+}
+ul {
+    display: flex;
+    list-style-type: none;
+    background-color: rgba(235, 166, 235, 0.2);
+    padding: 40px;
+}
+
+ul li {
+    margin-right: 70px;
+}
+
+li a {
+    text-decoration: none;
+    color: white;
+}
+
+a:hover, .link a:hover {
+    background-color: transparent;
+    color: rgb(71, 169, 255);
+    border-style: groove;
+    border-color: purple;
+    padding: 10px;
+}
+
+.navbar {
+    grid-area: nav;
+}
+.body1 {
+    grid-area: body1;
+}
+
+.container {
+    width: 500px;
+    margin: auto;
+    margin-top: 100px;
+}
+
+h3 {
+    letter-spacing: 10px;
+    font-size: 15px;
+    text-transform: uppercase;
+    color: white;
+    margin: 0 100px;
+}
+
+h2, h4 {
+    color: blue;
+    text-transform: uppercase;
+    margin: 0 90px;
+}
+
+h4 {
+    font-size: 20px;
+}
+.link {
+    margin-top: 40px;
+}
+
+.link a {
+    text-decoration: none;
+    color: white;
+    border: 2px solid white;
+    border-radius: 30px;
+    padding: 15px 30px;
+    margin-left: 30px;
+    text-transform: capitalize;
+}
+.first {
+    background-color: red;
+}
+.page2 {
+    grid-area: body2;
+    background-color: #250a3e;
+    margin-top: 130px;
+    display: grid;
+    grid-template-columns: repeat(9, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    height: 100vh;
+    gap: 5px;
+    padding: 15px;
+}
+.one, .two, .three, .four, .five, .six {
+    background-color: #9934e8;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.one {
+    grid-column: 1 / span 2;
+    grid-row: 1 / span 2;
+}
+
+.two {
+    grid-column: 3 / span 3;
+    grid-row: 1 / span 1;
+}
+
+.three {
+    grid-column: 6 / span 1;
+    grid-row: 1 / span 1;
+}
+
+.four {
+    grid-column: 7 / span 3;
+    grid-row: 1 / span 1;
+}
+
+.five {
+    grid-column: 3 / span 4;
+    grid-row: 2 / span 1;
+}
+
+.six {
+    grid-column: 7 / span 3;
+    grid-row: 2 / span 1;
+}
+
+.page2 img {
+    width: 300px;
+    height: 300px;
+    border-radius: 69%;
+}
+.footer {
+    grid-area: footer;
+    text-align: center;
+    background-color: #190230;
+    color: white;
+}
+
+.footer p {
+    margin-top: 15px;
+}
